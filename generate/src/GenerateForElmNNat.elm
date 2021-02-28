@@ -474,13 +474,13 @@ nNatModule lastN =
                 (fqConstruct [ "Internal" ] "toInt" [])
           ]
         , [ packageExposedFunDecl NNatValue
-                [ markdown "The NNat 0." ]
+                [ markdown "The `NNat` 0." ]
                 zeroAnn
                 "n0"
                 []
                 (fqConstruct [ "Internal" ] "zero" [])
           ]
-        , List.range 1 lastN
+        , List.range 1 (lastN * 2)
             |> List.map
                 (\x ->
                     packageExposedFunDecl NNatValue
@@ -601,7 +601,7 @@ view { lastN, nNatModuleShownOrFolded } =
                 , UiFont.family [ UiFont.typeface "Fira Code" ]
                 ]
                 (Ui.text "elm-n-nat modules")
-            , Ui.slider { min = 100, max = 1024, value = lastN } ChangeLastN
+            , Ui.slider { min = 50, max = 512, value = lastN } ChangeLastN
             , UiInput.button
                 [ Ui.padding 16
                 , UiBg.color (Ui.rgba 1 0.4 0 0.6)

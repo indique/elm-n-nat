@@ -6,7 +6,7 @@ Current attempts of represening `Nat`ural numbers (>= 0) only have quite lose pr
 
 This package contains a very strict `Nat` type. The _actual value_ is present in the type.
 
-- If you only want to ensure that a `Nat` is within a minimum & maximum, try `indique/elm-n-nat-within`!
+- If you only want to ensure that a `Nat` is within a minimum & maximum, try [`elm-nat-within`][elm-nat-within]!
 
 Setup
 
@@ -15,63 +15,49 @@ Setup
 > elm install indique/elm-n-nat
 
 ```elm
-import N.Nat exposing (NNat)
+import NNat exposing (NNat)
 import N.Type exposing (..)
 --this is N, Is, Difference, To
 import N.Nat.Type exposing (..)
---N, 0Nat, N1Nat, ..., N1024Nat
+--this is N0Nat, N1Nat, ..., N1024Nat
 --        N1NatPlus, N2NatPlus ..., N1024NatPlus
-import N.Nats exposing (..)
---n, add, subtract: 0 to 1024
 ```
 
-This is how its types look
+Lets take a look at its types
 
 ```elm
-n0Nat :
+n0 :
     NNat --a natural number
         (N N0Nat --zero is the exact value at compile time
          Is (Difference a To a)
-         --we can also describe zero as the difference `a - a`
+         --we can also describe zero as the difference a - a
         )
 
-n10Nat : NNat (N N10Nat Is (Difference a To (N10NatPlus a)))
-
 sub1 :
-    NNat (N N1Nat Is (Difference a To (N1NatPlus a)))
+    NNat
+        (N (N1NatPlus nMinus1)
+            --the exact value is nMinus1 + 1
+            Is (Difference a To (N1NatPlus nPlusAMinus1))
+            --we can also describe it as the difference (a + nMinus1 + 1) - a
+        )
+        
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 ```
+→ `sub1 n0` is a compile-time-error!
 
-- `takesOnlyExact1 n10Nat` is a compile-time-error
+→ We can only call `sub123` for a `NNat` that is at least 123
 
-```elm
-takesAtLeast2 : NaturalNumber (N2NatPlus maybeMore)
-```
+You can also express things like
+- one `NNat` should be at least as big as another one.
 
-- `takesAtLeast2 n1Nat` is a compile-time-error
-- `takesAtLeast2 n10Nat` & `takesAtLeast2 n2Nat` work
+    ```elm
+    safeInterval :
+        NNat first (Plus lastMinusFirst Is last)
+        -> NNat last addAbility
+        -> Interval
+    ```
 
-Subtract is a good example of that
+Take a look at [`elm-nat-within`][elm-nat-within] & [`elm-n-array`][elm-n-array] to see `NNat` in action!
 
-```elm
-subtract6 :
-    NNat (N1Plus nMinus1) (Plus a Is (N1Plus nMinus1PlusA))
-    -> NNat nMinus1 (Plus a Is nMinus1PlusA)
-subtract6 naturalNumber =
-    naturalNumber |> subN3Nat |> subN2Nat |> subN1Nat
-```
-
-We have a typesafe subtract? Thant's neat.
-
-For more complex usecases, you might also want a function, where one `NNat` should be at least as big as another one.
-
-```elm
-safeInterval :
-    NNat first (Plus lastMinusFirst Is last)
-    -> NNat last addAbility
-    -> Interval
-```
-
-
-This package is the foundation of `indique/elm-n-nat`, `indique/elm-nat-within`, `indique/elm-n-array`.
-
-Take a closer look at those packages to see `N.Nat.Type` in action!
+[elm-nat-within]: https://package.elm-lang.org/packages/indique/elm-n-nat-within/latest/
+[elm-n-array]: https://package.elm-lang.org/packages/indique/elm-n-array/latest/

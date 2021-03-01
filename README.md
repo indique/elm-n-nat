@@ -57,7 +57,7 @@ You can also express things like
         -> Interval
     ```
 
-Take a look at [`elm-nat-within`][elm-nat-within] & [`elm-n-array`][elm-n-array] to see `NNat` in action!
+Take a look at [`elm-nat-in-range`][elm-nat-in-range] & [`elm-n-array`][elm-n-array] to see `NNat` in action!
 
-[elm-nat-within]: https://package.elm-lang.org/packages/indique/elm-n-nat-within/latest/
+[elm-nat-in-range]: https://package.elm-lang.org/packages/indique/elm-nat-in-range/latest/
 [elm-n-array]: https://package.elm-lang.org/packages/indique/elm-n-array/latest/

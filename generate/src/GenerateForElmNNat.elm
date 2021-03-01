@@ -95,9 +95,8 @@ main =
 
 
 type alias Model =
-    { lastN : Int
-    , nNatModuleShownOrFolded :
-        ShownOrFoldedWithOptionalSave (Ui.Element Msg)
+    { nNatModuleShownOrFolded :
+        ShownOrFolded (Ui.Element Msg)
     , internalModuleShownOrFolded :
         ShownOrFolded (Ui.Element Msg)
     }
@@ -106,11 +105,6 @@ type alias Model =
 type ShownOrFolded content
     = Shown content
     | Folded
-
-
-type ShownOrFoldedWithOptionalSave content
-    = ShownOrFolded (ShownOrFolded content)
-    | HiddenWithSave content
 
 
 
@@ -131,8 +125,7 @@ type NNatTag
 
 init : ( Model, Cmd Msg )
 init =
-    ( { lastN = 128
-      , nNatModuleShownOrFolded = ShownOrFolded Folded
+    ( { nNatModuleShownOrFolded = Folded
       , internalModuleShownOrFolded = Folded
       }
     , Cmd.none
@@ -140,8 +133,7 @@ init =
 
 
 type Msg
-    = ChangeLastN Int
-    | DownloadModules
+    = DownloadModules
     | DownloadModulesAtTime ( Time.Zone, Time.Posix )
     | SwitchVisibleModule ModulesInElmNArrays
 
@@ -154,14 +146,6 @@ type ModulesInElmNArrays
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
-        ChangeLastN lastN ->
-            ( { model
-                | lastN = lastN
-                , nNatModuleShownOrFolded = ShownOrFolded Folded
-              }
-            , Cmd.none
-            )
-
         DownloadModules ->
             ( model
             , Task.perform
@@ -185,7 +169,7 @@ update msg model =
                         zipEntryFromModule time moduleFile
                  in
                  Zip.fromEntries
-                    [ toZipEntry (nNatModule (.lastN model))
+                    [ toZipEntry nNatModule
                     , toZipEntry internalModule
                     ]
                     |> Zip.toBytes
@@ -197,12 +181,9 @@ update msg model =
                 NNat ->
                     { model
                         | nNatModuleShownOrFolded =
-                            switchShownOrFoldedWithSave
+                            switchShownOrFolded
                                 (.nNatModuleShownOrFolded model)
-                                (\() ->
-                                    nNatModule (.lastN model)
-                                        |> Ui.module_
-                                )
+                                viewNNatModule
                     }
 
                 Internal ->
@@ -216,23 +197,6 @@ update msg model =
             )
 
 
-switchShownOrFoldedWithSave :
-    ShownOrFoldedWithOptionalSave content
-    -> (() -> content)
-    -> ShownOrFoldedWithOptionalSave content
-switchShownOrFoldedWithSave visibility makeContent =
-    case visibility of
-        ShownOrFolded Folded ->
-            ShownOrFolded
-                (Shown (makeContent ()))
-
-        HiddenWithSave content ->
-            ShownOrFolded (Shown content)
-
-        ShownOrFolded (Shown content) ->
-            HiddenWithSave content
-
-
 switchShownOrFolded :
     ShownOrFolded content
     -> content
@@ -244,16 +208,6 @@ switchShownOrFolded visibility content =
 
         Folded ->
             Shown content
-
-
-dropSaved : ShownOrFoldedWithOptionalSave content -> ShownOrFolded content
-dropSaved visibilityWithSave =
-    case visibilityWithSave of
-        ShownOrFolded visibility ->
-            visibility
-
-        HiddenWithSave _ ->
-            Folded
 
 
 
@@ -348,6 +302,11 @@ subXAnn x =
 --
 
 
+lastN : Int
+lastN =
+    192
+
+
 viewInternalModule : Ui.Element msg
 viewInternalModule =
     Ui.module_ internalModule
@@ -413,8 +372,13 @@ internalModule =
     }
 
 
-nNatModule : Int -> Module NNatTag
-nNatModule lastN =
+viewNNatModule : Ui.Element msg
+viewNNatModule =
+    Ui.module_ nNatModule
+
+
+nNatModule : Module NNatTag
+nNatModule =
     { name = [ "NNat" ]
     , roleInPackage =
         PackageExposedModule
@@ -480,7 +444,7 @@ nNatModule lastN =
                 []
                 (fqConstruct [ "Internal" ] "zero" [])
           ]
-        , List.range 1 (lastN * 2)
+        , List.range 1 lastN
             |> List.map
                 (\x ->
                     packageExposedFunDecl NNatValue
@@ -577,7 +541,7 @@ charPrefixed use last =
 
 
 view : Model -> Html Msg
-view { lastN, nNatModuleShownOrFolded } =
+view { nNatModuleShownOrFolded, internalModuleShownOrFolded } =
     Ui.layoutWith
         { options =
             [ Ui.focusStyle
@@ -601,7 +565,6 @@ view { lastN, nNatModuleShownOrFolded } =
                 , UiFont.family [ UiFont.typeface "Fira Code" ]
                 ]
                 (Ui.text "elm-n-nat modules")
-            , Ui.slider { min = 50, max = 512, value = lastN } ChangeLastN
             , UiInput.button
                 [ Ui.padding 16
                 , UiBg.color (Ui.rgba 1 0.4 0 0.6)
@@ -654,8 +617,11 @@ view { lastN, nNatModuleShownOrFolded } =
                                     Folded ->
                                         switchButton ("⌄ " ++ name) switch
                         in
-                        [ ( nNatModuleShownOrFolded |> dropSaved
+                        [ ( nNatModuleShownOrFolded
                           , ( "NNat", NNat )
+                          )
+                        , ( internalModuleShownOrFolded
+                          , ( "Internal", Internal )
                           )
                         ]
                             |> List.map

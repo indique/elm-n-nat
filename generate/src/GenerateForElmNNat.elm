@@ -491,7 +491,7 @@ nNatModule =
                     packageExposedFunDecl NNatSub
                         [ markdown ("The NNat minus " ++ String.fromInt x ++ ".")
                         ]
-                        (addXAnn x)
+                        (subXAnn x)
                         ("sub" ++ String.fromInt x)
                         []
                         (case x of

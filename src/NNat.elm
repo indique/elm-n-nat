@@ -3982,8 +3982,8 @@ add192 =
 
 -}
 sub1 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N1NatPlus n) Is (Difference a To (N1NatPlus nPlusA)))
+    NNat (N (N1NatPlus nMinus1) Is (Difference a To (N1NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub1 =
     Internal.sub1
 
@@ -3993,8 +3993,8 @@ sub1 =
 
 -}
 sub2 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N2NatPlus n) Is (Difference a To (N2NatPlus nPlusA)))
+    NNat (N (N2NatPlus nMinus1) Is (Difference a To (N2NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub2 =
     sub1 >> sub1
 
@@ -4004,8 +4004,8 @@ sub2 =
 
 -}
 sub3 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N3NatPlus n) Is (Difference a To (N3NatPlus nPlusA)))
+    NNat (N (N3NatPlus nMinus1) Is (Difference a To (N3NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub3 =
     sub2 >> sub1
 
@@ -4015,8 +4015,8 @@ sub3 =
 
 -}
 sub4 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N4NatPlus n) Is (Difference a To (N4NatPlus nPlusA)))
+    NNat (N (N4NatPlus nMinus1) Is (Difference a To (N4NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub4 =
     sub3 >> sub1
 
@@ -4026,8 +4026,8 @@ sub4 =
 
 -}
 sub5 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N5NatPlus n) Is (Difference a To (N5NatPlus nPlusA)))
+    NNat (N (N5NatPlus nMinus1) Is (Difference a To (N5NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub5 =
     sub4 >> sub1
 
@@ -4037,8 +4037,8 @@ sub5 =
 
 -}
 sub6 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N6NatPlus n) Is (Difference a To (N6NatPlus nPlusA)))
+    NNat (N (N6NatPlus nMinus1) Is (Difference a To (N6NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub6 =
     sub5 >> sub1
 
@@ -4048,8 +4048,8 @@ sub6 =
 
 -}
 sub7 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N7NatPlus n) Is (Difference a To (N7NatPlus nPlusA)))
+    NNat (N (N7NatPlus nMinus1) Is (Difference a To (N7NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub7 =
     sub6 >> sub1
 
@@ -4059,8 +4059,8 @@ sub7 =
 
 -}
 sub8 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N8NatPlus n) Is (Difference a To (N8NatPlus nPlusA)))
+    NNat (N (N8NatPlus nMinus1) Is (Difference a To (N8NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub8 =
     sub7 >> sub1
 
@@ -4070,8 +4070,8 @@ sub8 =
 
 -}
 sub9 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N9NatPlus n) Is (Difference a To (N9NatPlus nPlusA)))
+    NNat (N (N9NatPlus nMinus1) Is (Difference a To (N9NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub9 =
     sub8 >> sub1
 
@@ -4081,8 +4081,8 @@ sub9 =
 
 -}
 sub10 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N10NatPlus n) Is (Difference a To (N10NatPlus nPlusA)))
+    NNat (N (N10NatPlus nMinus1) Is (Difference a To (N10NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub10 =
     sub9 >> sub1
 
@@ -4092,8 +4092,8 @@ sub10 =
 
 -}
 sub11 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N11NatPlus n) Is (Difference a To (N11NatPlus nPlusA)))
+    NNat (N (N11NatPlus nMinus1) Is (Difference a To (N11NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub11 =
     sub10 >> sub1
 
@@ -4103,8 +4103,8 @@ sub11 =
 
 -}
 sub12 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N12NatPlus n) Is (Difference a To (N12NatPlus nPlusA)))
+    NNat (N (N12NatPlus nMinus1) Is (Difference a To (N12NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub12 =
     sub11 >> sub1
 
@@ -4114,8 +4114,8 @@ sub12 =
 
 -}
 sub13 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N13NatPlus n) Is (Difference a To (N13NatPlus nPlusA)))
+    NNat (N (N13NatPlus nMinus1) Is (Difference a To (N13NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub13 =
     sub12 >> sub1
 
@@ -4125,8 +4125,8 @@ sub13 =
 
 -}
 sub14 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N14NatPlus n) Is (Difference a To (N14NatPlus nPlusA)))
+    NNat (N (N14NatPlus nMinus1) Is (Difference a To (N14NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub14 =
     sub13 >> sub1
 
@@ -4136,8 +4136,8 @@ sub14 =
 
 -}
 sub15 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N15NatPlus n) Is (Difference a To (N15NatPlus nPlusA)))
+    NNat (N (N15NatPlus nMinus1) Is (Difference a To (N15NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub15 =
     sub14 >> sub1
 
@@ -4147,8 +4147,8 @@ sub15 =
 
 -}
 sub16 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N16NatPlus n) Is (Difference a To (N16NatPlus nPlusA)))
+    NNat (N (N16NatPlus nMinus1) Is (Difference a To (N16NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub16 =
     sub15 >> sub1
 
@@ -4158,8 +4158,8 @@ sub16 =
 
 -}
 sub17 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N17NatPlus n) Is (Difference a To (N17NatPlus nPlusA)))
+    NNat (N (N17NatPlus nMinus1) Is (Difference a To (N17NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub17 =
     sub16 >> sub1
 
@@ -4169,8 +4169,8 @@ sub17 =
 
 -}
 sub18 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N18NatPlus n) Is (Difference a To (N18NatPlus nPlusA)))
+    NNat (N (N18NatPlus nMinus1) Is (Difference a To (N18NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub18 =
     sub17 >> sub1
 
@@ -4180,8 +4180,8 @@ sub18 =
 
 -}
 sub19 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N19NatPlus n) Is (Difference a To (N19NatPlus nPlusA)))
+    NNat (N (N19NatPlus nMinus1) Is (Difference a To (N19NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub19 =
     sub18 >> sub1
 
@@ -4191,8 +4191,8 @@ sub19 =
 
 -}
 sub20 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N20NatPlus n) Is (Difference a To (N20NatPlus nPlusA)))
+    NNat (N (N20NatPlus nMinus1) Is (Difference a To (N20NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub20 =
     sub19 >> sub1
 
@@ -4202,8 +4202,8 @@ sub20 =
 
 -}
 sub21 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N21NatPlus n) Is (Difference a To (N21NatPlus nPlusA)))
+    NNat (N (N21NatPlus nMinus1) Is (Difference a To (N21NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub21 =
     sub20 >> sub1
 
@@ -4213,8 +4213,8 @@ sub21 =
 
 -}
 sub22 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N22NatPlus n) Is (Difference a To (N22NatPlus nPlusA)))
+    NNat (N (N22NatPlus nMinus1) Is (Difference a To (N22NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub22 =
     sub21 >> sub1
 
@@ -4224,8 +4224,8 @@ sub22 =
 
 -}
 sub23 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N23NatPlus n) Is (Difference a To (N23NatPlus nPlusA)))
+    NNat (N (N23NatPlus nMinus1) Is (Difference a To (N23NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub23 =
     sub22 >> sub1
 
@@ -4235,8 +4235,8 @@ sub23 =
 
 -}
 sub24 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N24NatPlus n) Is (Difference a To (N24NatPlus nPlusA)))
+    NNat (N (N24NatPlus nMinus1) Is (Difference a To (N24NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub24 =
     sub23 >> sub1
 
@@ -4246,8 +4246,8 @@ sub24 =
 
 -}
 sub25 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N25NatPlus n) Is (Difference a To (N25NatPlus nPlusA)))
+    NNat (N (N25NatPlus nMinus1) Is (Difference a To (N25NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub25 =
     sub24 >> sub1
 
@@ -4257,8 +4257,8 @@ sub25 =
 
 -}
 sub26 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N26NatPlus n) Is (Difference a To (N26NatPlus nPlusA)))
+    NNat (N (N26NatPlus nMinus1) Is (Difference a To (N26NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub26 =
     sub25 >> sub1
 
@@ -4268,8 +4268,8 @@ sub26 =
 
 -}
 sub27 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N27NatPlus n) Is (Difference a To (N27NatPlus nPlusA)))
+    NNat (N (N27NatPlus nMinus1) Is (Difference a To (N27NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub27 =
     sub26 >> sub1
 
@@ -4279,8 +4279,8 @@ sub27 =
 
 -}
 sub28 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N28NatPlus n) Is (Difference a To (N28NatPlus nPlusA)))
+    NNat (N (N28NatPlus nMinus1) Is (Difference a To (N28NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub28 =
     sub27 >> sub1
 
@@ -4290,8 +4290,8 @@ sub28 =
 
 -}
 sub29 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N29NatPlus n) Is (Difference a To (N29NatPlus nPlusA)))
+    NNat (N (N29NatPlus nMinus1) Is (Difference a To (N29NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub29 =
     sub28 >> sub1
 
@@ -4301,8 +4301,8 @@ sub29 =
 
 -}
 sub30 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N30NatPlus n) Is (Difference a To (N30NatPlus nPlusA)))
+    NNat (N (N30NatPlus nMinus1) Is (Difference a To (N30NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub30 =
     sub29 >> sub1
 
@@ -4312,8 +4312,8 @@ sub30 =
 
 -}
 sub31 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N31NatPlus n) Is (Difference a To (N31NatPlus nPlusA)))
+    NNat (N (N31NatPlus nMinus1) Is (Difference a To (N31NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub31 =
     sub30 >> sub1
 
@@ -4323,8 +4323,8 @@ sub31 =
 
 -}
 sub32 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N32NatPlus n) Is (Difference a To (N32NatPlus nPlusA)))
+    NNat (N (N32NatPlus nMinus1) Is (Difference a To (N32NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub32 =
     sub31 >> sub1
 
@@ -4334,8 +4334,8 @@ sub32 =
 
 -}
 sub33 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N33NatPlus n) Is (Difference a To (N33NatPlus nPlusA)))
+    NNat (N (N33NatPlus nMinus1) Is (Difference a To (N33NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub33 =
     sub32 >> sub1
 
@@ -4345,8 +4345,8 @@ sub33 =
 
 -}
 sub34 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N34NatPlus n) Is (Difference a To (N34NatPlus nPlusA)))
+    NNat (N (N34NatPlus nMinus1) Is (Difference a To (N34NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub34 =
     sub33 >> sub1
 
@@ -4356,8 +4356,8 @@ sub34 =
 
 -}
 sub35 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N35NatPlus n) Is (Difference a To (N35NatPlus nPlusA)))
+    NNat (N (N35NatPlus nMinus1) Is (Difference a To (N35NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub35 =
     sub34 >> sub1
 
@@ -4367,8 +4367,8 @@ sub35 =
 
 -}
 sub36 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N36NatPlus n) Is (Difference a To (N36NatPlus nPlusA)))
+    NNat (N (N36NatPlus nMinus1) Is (Difference a To (N36NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub36 =
     sub35 >> sub1
 
@@ -4378,8 +4378,8 @@ sub36 =
 
 -}
 sub37 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N37NatPlus n) Is (Difference a To (N37NatPlus nPlusA)))
+    NNat (N (N37NatPlus nMinus1) Is (Difference a To (N37NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub37 =
     sub36 >> sub1
 
@@ -4389,8 +4389,8 @@ sub37 =
 
 -}
 sub38 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N38NatPlus n) Is (Difference a To (N38NatPlus nPlusA)))
+    NNat (N (N38NatPlus nMinus1) Is (Difference a To (N38NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub38 =
     sub37 >> sub1
 
@@ -4400,8 +4400,8 @@ sub38 =
 
 -}
 sub39 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N39NatPlus n) Is (Difference a To (N39NatPlus nPlusA)))
+    NNat (N (N39NatPlus nMinus1) Is (Difference a To (N39NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub39 =
     sub38 >> sub1
 
@@ -4411,8 +4411,8 @@ sub39 =
 
 -}
 sub40 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N40NatPlus n) Is (Difference a To (N40NatPlus nPlusA)))
+    NNat (N (N40NatPlus nMinus1) Is (Difference a To (N40NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub40 =
     sub39 >> sub1
 
@@ -4422,8 +4422,8 @@ sub40 =
 
 -}
 sub41 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N41NatPlus n) Is (Difference a To (N41NatPlus nPlusA)))
+    NNat (N (N41NatPlus nMinus1) Is (Difference a To (N41NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub41 =
     sub40 >> sub1
 
@@ -4433,8 +4433,8 @@ sub41 =
 
 -}
 sub42 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N42NatPlus n) Is (Difference a To (N42NatPlus nPlusA)))
+    NNat (N (N42NatPlus nMinus1) Is (Difference a To (N42NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub42 =
     sub41 >> sub1
 
@@ -4444,8 +4444,8 @@ sub42 =
 
 -}
 sub43 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N43NatPlus n) Is (Difference a To (N43NatPlus nPlusA)))
+    NNat (N (N43NatPlus nMinus1) Is (Difference a To (N43NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub43 =
     sub42 >> sub1
 
@@ -4455,8 +4455,8 @@ sub43 =
 
 -}
 sub44 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N44NatPlus n) Is (Difference a To (N44NatPlus nPlusA)))
+    NNat (N (N44NatPlus nMinus1) Is (Difference a To (N44NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub44 =
     sub43 >> sub1
 
@@ -4466,8 +4466,8 @@ sub44 =
 
 -}
 sub45 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N45NatPlus n) Is (Difference a To (N45NatPlus nPlusA)))
+    NNat (N (N45NatPlus nMinus1) Is (Difference a To (N45NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub45 =
     sub44 >> sub1
 
@@ -4477,8 +4477,8 @@ sub45 =
 
 -}
 sub46 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N46NatPlus n) Is (Difference a To (N46NatPlus nPlusA)))
+    NNat (N (N46NatPlus nMinus1) Is (Difference a To (N46NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub46 =
     sub45 >> sub1
 
@@ -4488,8 +4488,8 @@ sub46 =
 
 -}
 sub47 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N47NatPlus n) Is (Difference a To (N47NatPlus nPlusA)))
+    NNat (N (N47NatPlus nMinus1) Is (Difference a To (N47NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub47 =
     sub46 >> sub1
 
@@ -4499,8 +4499,8 @@ sub47 =
 
 -}
 sub48 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N48NatPlus n) Is (Difference a To (N48NatPlus nPlusA)))
+    NNat (N (N48NatPlus nMinus1) Is (Difference a To (N48NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub48 =
     sub47 >> sub1
 
@@ -4510,8 +4510,8 @@ sub48 =
 
 -}
 sub49 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N49NatPlus n) Is (Difference a To (N49NatPlus nPlusA)))
+    NNat (N (N49NatPlus nMinus1) Is (Difference a To (N49NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub49 =
     sub48 >> sub1
 
@@ -4521,8 +4521,8 @@ sub49 =
 
 -}
 sub50 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N50NatPlus n) Is (Difference a To (N50NatPlus nPlusA)))
+    NNat (N (N50NatPlus nMinus1) Is (Difference a To (N50NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub50 =
     sub49 >> sub1
 
@@ -4532,8 +4532,8 @@ sub50 =
 
 -}
 sub51 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N51NatPlus n) Is (Difference a To (N51NatPlus nPlusA)))
+    NNat (N (N51NatPlus nMinus1) Is (Difference a To (N51NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub51 =
     sub50 >> sub1
 
@@ -4543,8 +4543,8 @@ sub51 =
 
 -}
 sub52 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N52NatPlus n) Is (Difference a To (N52NatPlus nPlusA)))
+    NNat (N (N52NatPlus nMinus1) Is (Difference a To (N52NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub52 =
     sub51 >> sub1
 
@@ -4554,8 +4554,8 @@ sub52 =
 
 -}
 sub53 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N53NatPlus n) Is (Difference a To (N53NatPlus nPlusA)))
+    NNat (N (N53NatPlus nMinus1) Is (Difference a To (N53NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub53 =
     sub52 >> sub1
 
@@ -4565,8 +4565,8 @@ sub53 =
 
 -}
 sub54 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N54NatPlus n) Is (Difference a To (N54NatPlus nPlusA)))
+    NNat (N (N54NatPlus nMinus1) Is (Difference a To (N54NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub54 =
     sub53 >> sub1
 
@@ -4576,8 +4576,8 @@ sub54 =
 
 -}
 sub55 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N55NatPlus n) Is (Difference a To (N55NatPlus nPlusA)))
+    NNat (N (N55NatPlus nMinus1) Is (Difference a To (N55NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub55 =
     sub54 >> sub1
 
@@ -4587,8 +4587,8 @@ sub55 =
 
 -}
 sub56 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N56NatPlus n) Is (Difference a To (N56NatPlus nPlusA)))
+    NNat (N (N56NatPlus nMinus1) Is (Difference a To (N56NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub56 =
     sub55 >> sub1
 
@@ -4598,8 +4598,8 @@ sub56 =
 
 -}
 sub57 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N57NatPlus n) Is (Difference a To (N57NatPlus nPlusA)))
+    NNat (N (N57NatPlus nMinus1) Is (Difference a To (N57NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub57 =
     sub56 >> sub1
 
@@ -4609,8 +4609,8 @@ sub57 =
 
 -}
 sub58 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N58NatPlus n) Is (Difference a To (N58NatPlus nPlusA)))
+    NNat (N (N58NatPlus nMinus1) Is (Difference a To (N58NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub58 =
     sub57 >> sub1
 
@@ -4620,8 +4620,8 @@ sub58 =
 
 -}
 sub59 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N59NatPlus n) Is (Difference a To (N59NatPlus nPlusA)))
+    NNat (N (N59NatPlus nMinus1) Is (Difference a To (N59NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub59 =
     sub58 >> sub1
 
@@ -4631,8 +4631,8 @@ sub59 =
 
 -}
 sub60 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N60NatPlus n) Is (Difference a To (N60NatPlus nPlusA)))
+    NNat (N (N60NatPlus nMinus1) Is (Difference a To (N60NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub60 =
     sub59 >> sub1
 
@@ -4642,8 +4642,8 @@ sub60 =
 
 -}
 sub61 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N61NatPlus n) Is (Difference a To (N61NatPlus nPlusA)))
+    NNat (N (N61NatPlus nMinus1) Is (Difference a To (N61NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub61 =
     sub60 >> sub1
 
@@ -4653,8 +4653,8 @@ sub61 =
 
 -}
 sub62 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N62NatPlus n) Is (Difference a To (N62NatPlus nPlusA)))
+    NNat (N (N62NatPlus nMinus1) Is (Difference a To (N62NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub62 =
     sub61 >> sub1
 
@@ -4664,8 +4664,8 @@ sub62 =
 
 -}
 sub63 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N63NatPlus n) Is (Difference a To (N63NatPlus nPlusA)))
+    NNat (N (N63NatPlus nMinus1) Is (Difference a To (N63NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub63 =
     sub62 >> sub1
 
@@ -4675,8 +4675,8 @@ sub63 =
 
 -}
 sub64 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N64NatPlus n) Is (Difference a To (N64NatPlus nPlusA)))
+    NNat (N (N64NatPlus nMinus1) Is (Difference a To (N64NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub64 =
     sub63 >> sub1
 
@@ -4686,8 +4686,8 @@ sub64 =
 
 -}
 sub65 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N65NatPlus n) Is (Difference a To (N65NatPlus nPlusA)))
+    NNat (N (N65NatPlus nMinus1) Is (Difference a To (N65NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub65 =
     sub64 >> sub1
 
@@ -4697,8 +4697,8 @@ sub65 =
 
 -}
 sub66 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N66NatPlus n) Is (Difference a To (N66NatPlus nPlusA)))
+    NNat (N (N66NatPlus nMinus1) Is (Difference a To (N66NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub66 =
     sub65 >> sub1
 
@@ -4708,8 +4708,8 @@ sub66 =
 
 -}
 sub67 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N67NatPlus n) Is (Difference a To (N67NatPlus nPlusA)))
+    NNat (N (N67NatPlus nMinus1) Is (Difference a To (N67NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub67 =
     sub66 >> sub1
 
@@ -4719,8 +4719,8 @@ sub67 =
 
 -}
 sub68 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N68NatPlus n) Is (Difference a To (N68NatPlus nPlusA)))
+    NNat (N (N68NatPlus nMinus1) Is (Difference a To (N68NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub68 =
     sub67 >> sub1
 
@@ -4730,8 +4730,8 @@ sub68 =
 
 -}
 sub69 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N69NatPlus n) Is (Difference a To (N69NatPlus nPlusA)))
+    NNat (N (N69NatPlus nMinus1) Is (Difference a To (N69NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub69 =
     sub68 >> sub1
 
@@ -4741,8 +4741,8 @@ sub69 =
 
 -}
 sub70 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N70NatPlus n) Is (Difference a To (N70NatPlus nPlusA)))
+    NNat (N (N70NatPlus nMinus1) Is (Difference a To (N70NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub70 =
     sub69 >> sub1
 
@@ -4752,8 +4752,8 @@ sub70 =
 
 -}
 sub71 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N71NatPlus n) Is (Difference a To (N71NatPlus nPlusA)))
+    NNat (N (N71NatPlus nMinus1) Is (Difference a To (N71NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub71 =
     sub70 >> sub1
 
@@ -4763,8 +4763,8 @@ sub71 =
 
 -}
 sub72 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N72NatPlus n) Is (Difference a To (N72NatPlus nPlusA)))
+    NNat (N (N72NatPlus nMinus1) Is (Difference a To (N72NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub72 =
     sub71 >> sub1
 
@@ -4774,8 +4774,8 @@ sub72 =
 
 -}
 sub73 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N73NatPlus n) Is (Difference a To (N73NatPlus nPlusA)))
+    NNat (N (N73NatPlus nMinus1) Is (Difference a To (N73NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub73 =
     sub72 >> sub1
 
@@ -4785,8 +4785,8 @@ sub73 =
 
 -}
 sub74 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N74NatPlus n) Is (Difference a To (N74NatPlus nPlusA)))
+    NNat (N (N74NatPlus nMinus1) Is (Difference a To (N74NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub74 =
     sub73 >> sub1
 
@@ -4796,8 +4796,8 @@ sub74 =
 
 -}
 sub75 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N75NatPlus n) Is (Difference a To (N75NatPlus nPlusA)))
+    NNat (N (N75NatPlus nMinus1) Is (Difference a To (N75NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub75 =
     sub74 >> sub1
 
@@ -4807,8 +4807,8 @@ sub75 =
 
 -}
 sub76 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N76NatPlus n) Is (Difference a To (N76NatPlus nPlusA)))
+    NNat (N (N76NatPlus nMinus1) Is (Difference a To (N76NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub76 =
     sub75 >> sub1
 
@@ -4818,8 +4818,8 @@ sub76 =
 
 -}
 sub77 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N77NatPlus n) Is (Difference a To (N77NatPlus nPlusA)))
+    NNat (N (N77NatPlus nMinus1) Is (Difference a To (N77NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub77 =
     sub76 >> sub1
 
@@ -4829,8 +4829,8 @@ sub77 =
 
 -}
 sub78 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N78NatPlus n) Is (Difference a To (N78NatPlus nPlusA)))
+    NNat (N (N78NatPlus nMinus1) Is (Difference a To (N78NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub78 =
     sub77 >> sub1
 
@@ -4840,8 +4840,8 @@ sub78 =
 
 -}
 sub79 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N79NatPlus n) Is (Difference a To (N79NatPlus nPlusA)))
+    NNat (N (N79NatPlus nMinus1) Is (Difference a To (N79NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub79 =
     sub78 >> sub1
 
@@ -4851,8 +4851,8 @@ sub79 =
 
 -}
 sub80 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N80NatPlus n) Is (Difference a To (N80NatPlus nPlusA)))
+    NNat (N (N80NatPlus nMinus1) Is (Difference a To (N80NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub80 =
     sub79 >> sub1
 
@@ -4862,8 +4862,8 @@ sub80 =
 
 -}
 sub81 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N81NatPlus n) Is (Difference a To (N81NatPlus nPlusA)))
+    NNat (N (N81NatPlus nMinus1) Is (Difference a To (N81NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub81 =
     sub80 >> sub1
 
@@ -4873,8 +4873,8 @@ sub81 =
 
 -}
 sub82 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N82NatPlus n) Is (Difference a To (N82NatPlus nPlusA)))
+    NNat (N (N82NatPlus nMinus1) Is (Difference a To (N82NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub82 =
     sub81 >> sub1
 
@@ -4884,8 +4884,8 @@ sub82 =
 
 -}
 sub83 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N83NatPlus n) Is (Difference a To (N83NatPlus nPlusA)))
+    NNat (N (N83NatPlus nMinus1) Is (Difference a To (N83NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub83 =
     sub82 >> sub1
 
@@ -4895,8 +4895,8 @@ sub83 =
 
 -}
 sub84 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N84NatPlus n) Is (Difference a To (N84NatPlus nPlusA)))
+    NNat (N (N84NatPlus nMinus1) Is (Difference a To (N84NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub84 =
     sub83 >> sub1
 
@@ -4906,8 +4906,8 @@ sub84 =
 
 -}
 sub85 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N85NatPlus n) Is (Difference a To (N85NatPlus nPlusA)))
+    NNat (N (N85NatPlus nMinus1) Is (Difference a To (N85NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub85 =
     sub84 >> sub1
 
@@ -4917,8 +4917,8 @@ sub85 =
 
 -}
 sub86 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N86NatPlus n) Is (Difference a To (N86NatPlus nPlusA)))
+    NNat (N (N86NatPlus nMinus1) Is (Difference a To (N86NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub86 =
     sub85 >> sub1
 
@@ -4928,8 +4928,8 @@ sub86 =
 
 -}
 sub87 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N87NatPlus n) Is (Difference a To (N87NatPlus nPlusA)))
+    NNat (N (N87NatPlus nMinus1) Is (Difference a To (N87NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub87 =
     sub86 >> sub1
 
@@ -4939,8 +4939,8 @@ sub87 =
 
 -}
 sub88 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N88NatPlus n) Is (Difference a To (N88NatPlus nPlusA)))
+    NNat (N (N88NatPlus nMinus1) Is (Difference a To (N88NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub88 =
     sub87 >> sub1
 
@@ -4950,8 +4950,8 @@ sub88 =
 
 -}
 sub89 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N89NatPlus n) Is (Difference a To (N89NatPlus nPlusA)))
+    NNat (N (N89NatPlus nMinus1) Is (Difference a To (N89NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub89 =
     sub88 >> sub1
 
@@ -4961,8 +4961,8 @@ sub89 =
 
 -}
 sub90 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N90NatPlus n) Is (Difference a To (N90NatPlus nPlusA)))
+    NNat (N (N90NatPlus nMinus1) Is (Difference a To (N90NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub90 =
     sub89 >> sub1
 
@@ -4972,8 +4972,8 @@ sub90 =
 
 -}
 sub91 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N91NatPlus n) Is (Difference a To (N91NatPlus nPlusA)))
+    NNat (N (N91NatPlus nMinus1) Is (Difference a To (N91NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub91 =
     sub90 >> sub1
 
@@ -4983,8 +4983,8 @@ sub91 =
 
 -}
 sub92 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N92NatPlus n) Is (Difference a To (N92NatPlus nPlusA)))
+    NNat (N (N92NatPlus nMinus1) Is (Difference a To (N92NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub92 =
     sub91 >> sub1
 
@@ -4994,8 +4994,8 @@ sub92 =
 
 -}
 sub93 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N93NatPlus n) Is (Difference a To (N93NatPlus nPlusA)))
+    NNat (N (N93NatPlus nMinus1) Is (Difference a To (N93NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub93 =
     sub92 >> sub1
 
@@ -5005,8 +5005,8 @@ sub93 =
 
 -}
 sub94 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N94NatPlus n) Is (Difference a To (N94NatPlus nPlusA)))
+    NNat (N (N94NatPlus nMinus1) Is (Difference a To (N94NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub94 =
     sub93 >> sub1
 
@@ -5016,8 +5016,8 @@ sub94 =
 
 -}
 sub95 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N95NatPlus n) Is (Difference a To (N95NatPlus nPlusA)))
+    NNat (N (N95NatPlus nMinus1) Is (Difference a To (N95NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub95 =
     sub94 >> sub1
 
@@ -5027,8 +5027,8 @@ sub95 =
 
 -}
 sub96 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N96NatPlus n) Is (Difference a To (N96NatPlus nPlusA)))
+    NNat (N (N96NatPlus nMinus1) Is (Difference a To (N96NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub96 =
     sub95 >> sub1
 
@@ -5038,8 +5038,8 @@ sub96 =
 
 -}
 sub97 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N97NatPlus n) Is (Difference a To (N97NatPlus nPlusA)))
+    NNat (N (N97NatPlus nMinus1) Is (Difference a To (N97NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub97 =
     sub96 >> sub1
 
@@ -5049,8 +5049,8 @@ sub97 =
 
 -}
 sub98 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N98NatPlus n) Is (Difference a To (N98NatPlus nPlusA)))
+    NNat (N (N98NatPlus nMinus1) Is (Difference a To (N98NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub98 =
     sub97 >> sub1
 
@@ -5060,8 +5060,8 @@ sub98 =
 
 -}
 sub99 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N99NatPlus n) Is (Difference a To (N99NatPlus nPlusA)))
+    NNat (N (N99NatPlus nMinus1) Is (Difference a To (N99NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub99 =
     sub98 >> sub1
 
@@ -5071,8 +5071,8 @@ sub99 =
 
 -}
 sub100 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N100NatPlus n) Is (Difference a To (N100NatPlus nPlusA)))
+    NNat (N (N100NatPlus nMinus1) Is (Difference a To (N100NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub100 =
     sub99 >> sub1
 
@@ -5082,8 +5082,8 @@ sub100 =
 
 -}
 sub101 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N101NatPlus n) Is (Difference a To (N101NatPlus nPlusA)))
+    NNat (N (N101NatPlus nMinus1) Is (Difference a To (N101NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub101 =
     sub100 >> sub1
 
@@ -5093,8 +5093,8 @@ sub101 =
 
 -}
 sub102 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N102NatPlus n) Is (Difference a To (N102NatPlus nPlusA)))
+    NNat (N (N102NatPlus nMinus1) Is (Difference a To (N102NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub102 =
     sub101 >> sub1
 
@@ -5104,8 +5104,8 @@ sub102 =
 
 -}
 sub103 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N103NatPlus n) Is (Difference a To (N103NatPlus nPlusA)))
+    NNat (N (N103NatPlus nMinus1) Is (Difference a To (N103NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub103 =
     sub102 >> sub1
 
@@ -5115,8 +5115,8 @@ sub103 =
 
 -}
 sub104 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N104NatPlus n) Is (Difference a To (N104NatPlus nPlusA)))
+    NNat (N (N104NatPlus nMinus1) Is (Difference a To (N104NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub104 =
     sub103 >> sub1
 
@@ -5126,8 +5126,8 @@ sub104 =
 
 -}
 sub105 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N105NatPlus n) Is (Difference a To (N105NatPlus nPlusA)))
+    NNat (N (N105NatPlus nMinus1) Is (Difference a To (N105NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub105 =
     sub104 >> sub1
 
@@ -5137,8 +5137,8 @@ sub105 =
 
 -}
 sub106 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N106NatPlus n) Is (Difference a To (N106NatPlus nPlusA)))
+    NNat (N (N106NatPlus nMinus1) Is (Difference a To (N106NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub106 =
     sub105 >> sub1
 
@@ -5148,8 +5148,8 @@ sub106 =
 
 -}
 sub107 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N107NatPlus n) Is (Difference a To (N107NatPlus nPlusA)))
+    NNat (N (N107NatPlus nMinus1) Is (Difference a To (N107NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub107 =
     sub106 >> sub1
 
@@ -5159,8 +5159,8 @@ sub107 =
 
 -}
 sub108 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N108NatPlus n) Is (Difference a To (N108NatPlus nPlusA)))
+    NNat (N (N108NatPlus nMinus1) Is (Difference a To (N108NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub108 =
     sub107 >> sub1
 
@@ -5170,8 +5170,8 @@ sub108 =
 
 -}
 sub109 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N109NatPlus n) Is (Difference a To (N109NatPlus nPlusA)))
+    NNat (N (N109NatPlus nMinus1) Is (Difference a To (N109NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub109 =
     sub108 >> sub1
 
@@ -5181,8 +5181,8 @@ sub109 =
 
 -}
 sub110 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N110NatPlus n) Is (Difference a To (N110NatPlus nPlusA)))
+    NNat (N (N110NatPlus nMinus1) Is (Difference a To (N110NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub110 =
     sub109 >> sub1
 
@@ -5192,8 +5192,8 @@ sub110 =
 
 -}
 sub111 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N111NatPlus n) Is (Difference a To (N111NatPlus nPlusA)))
+    NNat (N (N111NatPlus nMinus1) Is (Difference a To (N111NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub111 =
     sub110 >> sub1
 
@@ -5203,8 +5203,8 @@ sub111 =
 
 -}
 sub112 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N112NatPlus n) Is (Difference a To (N112NatPlus nPlusA)))
+    NNat (N (N112NatPlus nMinus1) Is (Difference a To (N112NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub112 =
     sub111 >> sub1
 
@@ -5214,8 +5214,8 @@ sub112 =
 
 -}
 sub113 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N113NatPlus n) Is (Difference a To (N113NatPlus nPlusA)))
+    NNat (N (N113NatPlus nMinus1) Is (Difference a To (N113NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub113 =
     sub112 >> sub1
 
@@ -5225,8 +5225,8 @@ sub113 =
 
 -}
 sub114 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N114NatPlus n) Is (Difference a To (N114NatPlus nPlusA)))
+    NNat (N (N114NatPlus nMinus1) Is (Difference a To (N114NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub114 =
     sub113 >> sub1
 
@@ -5236,8 +5236,8 @@ sub114 =
 
 -}
 sub115 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N115NatPlus n) Is (Difference a To (N115NatPlus nPlusA)))
+    NNat (N (N115NatPlus nMinus1) Is (Difference a To (N115NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub115 =
     sub114 >> sub1
 
@@ -5247,8 +5247,8 @@ sub115 =
 
 -}
 sub116 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N116NatPlus n) Is (Difference a To (N116NatPlus nPlusA)))
+    NNat (N (N116NatPlus nMinus1) Is (Difference a To (N116NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub116 =
     sub115 >> sub1
 
@@ -5258,8 +5258,8 @@ sub116 =
 
 -}
 sub117 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N117NatPlus n) Is (Difference a To (N117NatPlus nPlusA)))
+    NNat (N (N117NatPlus nMinus1) Is (Difference a To (N117NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub117 =
     sub116 >> sub1
 
@@ -5269,8 +5269,8 @@ sub117 =
 
 -}
 sub118 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N118NatPlus n) Is (Difference a To (N118NatPlus nPlusA)))
+    NNat (N (N118NatPlus nMinus1) Is (Difference a To (N118NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub118 =
     sub117 >> sub1
 
@@ -5280,8 +5280,8 @@ sub118 =
 
 -}
 sub119 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N119NatPlus n) Is (Difference a To (N119NatPlus nPlusA)))
+    NNat (N (N119NatPlus nMinus1) Is (Difference a To (N119NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub119 =
     sub118 >> sub1
 
@@ -5291,8 +5291,8 @@ sub119 =
 
 -}
 sub120 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N120NatPlus n) Is (Difference a To (N120NatPlus nPlusA)))
+    NNat (N (N120NatPlus nMinus1) Is (Difference a To (N120NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub120 =
     sub119 >> sub1
 
@@ -5302,8 +5302,8 @@ sub120 =
 
 -}
 sub121 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N121NatPlus n) Is (Difference a To (N121NatPlus nPlusA)))
+    NNat (N (N121NatPlus nMinus1) Is (Difference a To (N121NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub121 =
     sub120 >> sub1
 
@@ -5313,8 +5313,8 @@ sub121 =
 
 -}
 sub122 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N122NatPlus n) Is (Difference a To (N122NatPlus nPlusA)))
+    NNat (N (N122NatPlus nMinus1) Is (Difference a To (N122NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub122 =
     sub121 >> sub1
 
@@ -5324,8 +5324,8 @@ sub122 =
 
 -}
 sub123 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N123NatPlus n) Is (Difference a To (N123NatPlus nPlusA)))
+    NNat (N (N123NatPlus nMinus1) Is (Difference a To (N123NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub123 =
     sub122 >> sub1
 
@@ -5335,8 +5335,8 @@ sub123 =
 
 -}
 sub124 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N124NatPlus n) Is (Difference a To (N124NatPlus nPlusA)))
+    NNat (N (N124NatPlus nMinus1) Is (Difference a To (N124NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub124 =
     sub123 >> sub1
 
@@ -5346,8 +5346,8 @@ sub124 =
 
 -}
 sub125 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N125NatPlus n) Is (Difference a To (N125NatPlus nPlusA)))
+    NNat (N (N125NatPlus nMinus1) Is (Difference a To (N125NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub125 =
     sub124 >> sub1
 
@@ -5357,8 +5357,8 @@ sub125 =
 
 -}
 sub126 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N126NatPlus n) Is (Difference a To (N126NatPlus nPlusA)))
+    NNat (N (N126NatPlus nMinus1) Is (Difference a To (N126NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub126 =
     sub125 >> sub1
 
@@ -5368,8 +5368,8 @@ sub126 =
 
 -}
 sub127 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N127NatPlus n) Is (Difference a To (N127NatPlus nPlusA)))
+    NNat (N (N127NatPlus nMinus1) Is (Difference a To (N127NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub127 =
     sub126 >> sub1
 
@@ -5379,8 +5379,8 @@ sub127 =
 
 -}
 sub128 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N128NatPlus n) Is (Difference a To (N128NatPlus nPlusA)))
+    NNat (N (N128NatPlus nMinus1) Is (Difference a To (N128NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub128 =
     sub127 >> sub1
 
@@ -5390,8 +5390,8 @@ sub128 =
 
 -}
 sub129 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N129NatPlus n) Is (Difference a To (N129NatPlus nPlusA)))
+    NNat (N (N129NatPlus nMinus1) Is (Difference a To (N129NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub129 =
     sub128 >> sub1
 
@@ -5401,8 +5401,8 @@ sub129 =
 
 -}
 sub130 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N130NatPlus n) Is (Difference a To (N130NatPlus nPlusA)))
+    NNat (N (N130NatPlus nMinus1) Is (Difference a To (N130NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub130 =
     sub129 >> sub1
 
@@ -5412,8 +5412,8 @@ sub130 =
 
 -}
 sub131 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N131NatPlus n) Is (Difference a To (N131NatPlus nPlusA)))
+    NNat (N (N131NatPlus nMinus1) Is (Difference a To (N131NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub131 =
     sub130 >> sub1
 
@@ -5423,8 +5423,8 @@ sub131 =
 
 -}
 sub132 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N132NatPlus n) Is (Difference a To (N132NatPlus nPlusA)))
+    NNat (N (N132NatPlus nMinus1) Is (Difference a To (N132NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub132 =
     sub131 >> sub1
 
@@ -5434,8 +5434,8 @@ sub132 =
 
 -}
 sub133 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N133NatPlus n) Is (Difference a To (N133NatPlus nPlusA)))
+    NNat (N (N133NatPlus nMinus1) Is (Difference a To (N133NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub133 =
     sub132 >> sub1
 
@@ -5445,8 +5445,8 @@ sub133 =
 
 -}
 sub134 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N134NatPlus n) Is (Difference a To (N134NatPlus nPlusA)))
+    NNat (N (N134NatPlus nMinus1) Is (Difference a To (N134NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub134 =
     sub133 >> sub1
 
@@ -5456,8 +5456,8 @@ sub134 =
 
 -}
 sub135 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N135NatPlus n) Is (Difference a To (N135NatPlus nPlusA)))
+    NNat (N (N135NatPlus nMinus1) Is (Difference a To (N135NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub135 =
     sub134 >> sub1
 
@@ -5467,8 +5467,8 @@ sub135 =
 
 -}
 sub136 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N136NatPlus n) Is (Difference a To (N136NatPlus nPlusA)))
+    NNat (N (N136NatPlus nMinus1) Is (Difference a To (N136NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub136 =
     sub135 >> sub1
 
@@ -5478,8 +5478,8 @@ sub136 =
 
 -}
 sub137 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N137NatPlus n) Is (Difference a To (N137NatPlus nPlusA)))
+    NNat (N (N137NatPlus nMinus1) Is (Difference a To (N137NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub137 =
     sub136 >> sub1
 
@@ -5489,8 +5489,8 @@ sub137 =
 
 -}
 sub138 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N138NatPlus n) Is (Difference a To (N138NatPlus nPlusA)))
+    NNat (N (N138NatPlus nMinus1) Is (Difference a To (N138NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub138 =
     sub137 >> sub1
 
@@ -5500,8 +5500,8 @@ sub138 =
 
 -}
 sub139 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N139NatPlus n) Is (Difference a To (N139NatPlus nPlusA)))
+    NNat (N (N139NatPlus nMinus1) Is (Difference a To (N139NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub139 =
     sub138 >> sub1
 
@@ -5511,8 +5511,8 @@ sub139 =
 
 -}
 sub140 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N140NatPlus n) Is (Difference a To (N140NatPlus nPlusA)))
+    NNat (N (N140NatPlus nMinus1) Is (Difference a To (N140NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub140 =
     sub139 >> sub1
 
@@ -5522,8 +5522,8 @@ sub140 =
 
 -}
 sub141 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N141NatPlus n) Is (Difference a To (N141NatPlus nPlusA)))
+    NNat (N (N141NatPlus nMinus1) Is (Difference a To (N141NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub141 =
     sub140 >> sub1
 
@@ -5533,8 +5533,8 @@ sub141 =
 
 -}
 sub142 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N142NatPlus n) Is (Difference a To (N142NatPlus nPlusA)))
+    NNat (N (N142NatPlus nMinus1) Is (Difference a To (N142NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub142 =
     sub141 >> sub1
 
@@ -5544,8 +5544,8 @@ sub142 =
 
 -}
 sub143 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N143NatPlus n) Is (Difference a To (N143NatPlus nPlusA)))
+    NNat (N (N143NatPlus nMinus1) Is (Difference a To (N143NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub143 =
     sub142 >> sub1
 
@@ -5555,8 +5555,8 @@ sub143 =
 
 -}
 sub144 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N144NatPlus n) Is (Difference a To (N144NatPlus nPlusA)))
+    NNat (N (N144NatPlus nMinus1) Is (Difference a To (N144NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub144 =
     sub143 >> sub1
 
@@ -5566,8 +5566,8 @@ sub144 =
 
 -}
 sub145 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N145NatPlus n) Is (Difference a To (N145NatPlus nPlusA)))
+    NNat (N (N145NatPlus nMinus1) Is (Difference a To (N145NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub145 =
     sub144 >> sub1
 
@@ -5577,8 +5577,8 @@ sub145 =
 
 -}
 sub146 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N146NatPlus n) Is (Difference a To (N146NatPlus nPlusA)))
+    NNat (N (N146NatPlus nMinus1) Is (Difference a To (N146NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub146 =
     sub145 >> sub1
 
@@ -5588,8 +5588,8 @@ sub146 =
 
 -}
 sub147 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N147NatPlus n) Is (Difference a To (N147NatPlus nPlusA)))
+    NNat (N (N147NatPlus nMinus1) Is (Difference a To (N147NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub147 =
     sub146 >> sub1
 
@@ -5599,8 +5599,8 @@ sub147 =
 
 -}
 sub148 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N148NatPlus n) Is (Difference a To (N148NatPlus nPlusA)))
+    NNat (N (N148NatPlus nMinus1) Is (Difference a To (N148NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub148 =
     sub147 >> sub1
 
@@ -5610,8 +5610,8 @@ sub148 =
 
 -}
 sub149 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N149NatPlus n) Is (Difference a To (N149NatPlus nPlusA)))
+    NNat (N (N149NatPlus nMinus1) Is (Difference a To (N149NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub149 =
     sub148 >> sub1
 
@@ -5621,8 +5621,8 @@ sub149 =
 
 -}
 sub150 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N150NatPlus n) Is (Difference a To (N150NatPlus nPlusA)))
+    NNat (N (N150NatPlus nMinus1) Is (Difference a To (N150NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub150 =
     sub149 >> sub1
 
@@ -5632,8 +5632,8 @@ sub150 =
 
 -}
 sub151 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N151NatPlus n) Is (Difference a To (N151NatPlus nPlusA)))
+    NNat (N (N151NatPlus nMinus1) Is (Difference a To (N151NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub151 =
     sub150 >> sub1
 
@@ -5643,8 +5643,8 @@ sub151 =
 
 -}
 sub152 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N152NatPlus n) Is (Difference a To (N152NatPlus nPlusA)))
+    NNat (N (N152NatPlus nMinus1) Is (Difference a To (N152NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub152 =
     sub151 >> sub1
 
@@ -5654,8 +5654,8 @@ sub152 =
 
 -}
 sub153 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N153NatPlus n) Is (Difference a To (N153NatPlus nPlusA)))
+    NNat (N (N153NatPlus nMinus1) Is (Difference a To (N153NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub153 =
     sub152 >> sub1
 
@@ -5665,8 +5665,8 @@ sub153 =
 
 -}
 sub154 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N154NatPlus n) Is (Difference a To (N154NatPlus nPlusA)))
+    NNat (N (N154NatPlus nMinus1) Is (Difference a To (N154NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub154 =
     sub153 >> sub1
 
@@ -5676,8 +5676,8 @@ sub154 =
 
 -}
 sub155 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N155NatPlus n) Is (Difference a To (N155NatPlus nPlusA)))
+    NNat (N (N155NatPlus nMinus1) Is (Difference a To (N155NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub155 =
     sub154 >> sub1
 
@@ -5687,8 +5687,8 @@ sub155 =
 
 -}
 sub156 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N156NatPlus n) Is (Difference a To (N156NatPlus nPlusA)))
+    NNat (N (N156NatPlus nMinus1) Is (Difference a To (N156NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub156 =
     sub155 >> sub1
 
@@ -5698,8 +5698,8 @@ sub156 =
 
 -}
 sub157 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N157NatPlus n) Is (Difference a To (N157NatPlus nPlusA)))
+    NNat (N (N157NatPlus nMinus1) Is (Difference a To (N157NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub157 =
     sub156 >> sub1
 
@@ -5709,8 +5709,8 @@ sub157 =
 
 -}
 sub158 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N158NatPlus n) Is (Difference a To (N158NatPlus nPlusA)))
+    NNat (N (N158NatPlus nMinus1) Is (Difference a To (N158NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub158 =
     sub157 >> sub1
 
@@ -5720,8 +5720,8 @@ sub158 =
 
 -}
 sub159 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N159NatPlus n) Is (Difference a To (N159NatPlus nPlusA)))
+    NNat (N (N159NatPlus nMinus1) Is (Difference a To (N159NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub159 =
     sub158 >> sub1
 
@@ -5731,8 +5731,8 @@ sub159 =
 
 -}
 sub160 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N160NatPlus n) Is (Difference a To (N160NatPlus nPlusA)))
+    NNat (N (N160NatPlus nMinus1) Is (Difference a To (N160NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub160 =
     sub159 >> sub1
 
@@ -5742,8 +5742,8 @@ sub160 =
 
 -}
 sub161 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N161NatPlus n) Is (Difference a To (N161NatPlus nPlusA)))
+    NNat (N (N161NatPlus nMinus1) Is (Difference a To (N161NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub161 =
     sub160 >> sub1
 
@@ -5753,8 +5753,8 @@ sub161 =
 
 -}
 sub162 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N162NatPlus n) Is (Difference a To (N162NatPlus nPlusA)))
+    NNat (N (N162NatPlus nMinus1) Is (Difference a To (N162NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub162 =
     sub161 >> sub1
 
@@ -5764,8 +5764,8 @@ sub162 =
 
 -}
 sub163 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N163NatPlus n) Is (Difference a To (N163NatPlus nPlusA)))
+    NNat (N (N163NatPlus nMinus1) Is (Difference a To (N163NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub163 =
     sub162 >> sub1
 
@@ -5775,8 +5775,8 @@ sub163 =
 
 -}
 sub164 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N164NatPlus n) Is (Difference a To (N164NatPlus nPlusA)))
+    NNat (N (N164NatPlus nMinus1) Is (Difference a To (N164NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub164 =
     sub163 >> sub1
 
@@ -5786,8 +5786,8 @@ sub164 =
 
 -}
 sub165 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N165NatPlus n) Is (Difference a To (N165NatPlus nPlusA)))
+    NNat (N (N165NatPlus nMinus1) Is (Difference a To (N165NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub165 =
     sub164 >> sub1
 
@@ -5797,8 +5797,8 @@ sub165 =
 
 -}
 sub166 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N166NatPlus n) Is (Difference a To (N166NatPlus nPlusA)))
+    NNat (N (N166NatPlus nMinus1) Is (Difference a To (N166NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub166 =
     sub165 >> sub1
 
@@ -5808,8 +5808,8 @@ sub166 =
 
 -}
 sub167 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N167NatPlus n) Is (Difference a To (N167NatPlus nPlusA)))
+    NNat (N (N167NatPlus nMinus1) Is (Difference a To (N167NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub167 =
     sub166 >> sub1
 
@@ -5819,8 +5819,8 @@ sub167 =
 
 -}
 sub168 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N168NatPlus n) Is (Difference a To (N168NatPlus nPlusA)))
+    NNat (N (N168NatPlus nMinus1) Is (Difference a To (N168NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub168 =
     sub167 >> sub1
 
@@ -5830,8 +5830,8 @@ sub168 =
 
 -}
 sub169 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N169NatPlus n) Is (Difference a To (N169NatPlus nPlusA)))
+    NNat (N (N169NatPlus nMinus1) Is (Difference a To (N169NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub169 =
     sub168 >> sub1
 
@@ -5841,8 +5841,8 @@ sub169 =
 
 -}
 sub170 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N170NatPlus n) Is (Difference a To (N170NatPlus nPlusA)))
+    NNat (N (N170NatPlus nMinus1) Is (Difference a To (N170NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub170 =
     sub169 >> sub1
 
@@ -5852,8 +5852,8 @@ sub170 =
 
 -}
 sub171 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N171NatPlus n) Is (Difference a To (N171NatPlus nPlusA)))
+    NNat (N (N171NatPlus nMinus1) Is (Difference a To (N171NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub171 =
     sub170 >> sub1
 
@@ -5863,8 +5863,8 @@ sub171 =
 
 -}
 sub172 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N172NatPlus n) Is (Difference a To (N172NatPlus nPlusA)))
+    NNat (N (N172NatPlus nMinus1) Is (Difference a To (N172NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub172 =
     sub171 >> sub1
 
@@ -5874,8 +5874,8 @@ sub172 =
 
 -}
 sub173 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N173NatPlus n) Is (Difference a To (N173NatPlus nPlusA)))
+    NNat (N (N173NatPlus nMinus1) Is (Difference a To (N173NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub173 =
     sub172 >> sub1
 
@@ -5885,8 +5885,8 @@ sub173 =
 
 -}
 sub174 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N174NatPlus n) Is (Difference a To (N174NatPlus nPlusA)))
+    NNat (N (N174NatPlus nMinus1) Is (Difference a To (N174NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub174 =
     sub173 >> sub1
 
@@ -5896,8 +5896,8 @@ sub174 =
 
 -}
 sub175 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N175NatPlus n) Is (Difference a To (N175NatPlus nPlusA)))
+    NNat (N (N175NatPlus nMinus1) Is (Difference a To (N175NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub175 =
     sub174 >> sub1
 
@@ -5907,8 +5907,8 @@ sub175 =
 
 -}
 sub176 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N176NatPlus n) Is (Difference a To (N176NatPlus nPlusA)))
+    NNat (N (N176NatPlus nMinus1) Is (Difference a To (N176NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub176 =
     sub175 >> sub1
 
@@ -5918,8 +5918,8 @@ sub176 =
 
 -}
 sub177 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N177NatPlus n) Is (Difference a To (N177NatPlus nPlusA)))
+    NNat (N (N177NatPlus nMinus1) Is (Difference a To (N177NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub177 =
     sub176 >> sub1
 
@@ -5929,8 +5929,8 @@ sub177 =
 
 -}
 sub178 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N178NatPlus n) Is (Difference a To (N178NatPlus nPlusA)))
+    NNat (N (N178NatPlus nMinus1) Is (Difference a To (N178NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub178 =
     sub177 >> sub1
 
@@ -5940,8 +5940,8 @@ sub178 =
 
 -}
 sub179 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N179NatPlus n) Is (Difference a To (N179NatPlus nPlusA)))
+    NNat (N (N179NatPlus nMinus1) Is (Difference a To (N179NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub179 =
     sub178 >> sub1
 
@@ -5951,8 +5951,8 @@ sub179 =
 
 -}
 sub180 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N180NatPlus n) Is (Difference a To (N180NatPlus nPlusA)))
+    NNat (N (N180NatPlus nMinus1) Is (Difference a To (N180NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub180 =
     sub179 >> sub1
 
@@ -5962,8 +5962,8 @@ sub180 =
 
 -}
 sub181 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N181NatPlus n) Is (Difference a To (N181NatPlus nPlusA)))
+    NNat (N (N181NatPlus nMinus1) Is (Difference a To (N181NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub181 =
     sub180 >> sub1
 
@@ -5973,8 +5973,8 @@ sub181 =
 
 -}
 sub182 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N182NatPlus n) Is (Difference a To (N182NatPlus nPlusA)))
+    NNat (N (N182NatPlus nMinus1) Is (Difference a To (N182NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub182 =
     sub181 >> sub1
 
@@ -5984,8 +5984,8 @@ sub182 =
 
 -}
 sub183 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N183NatPlus n) Is (Difference a To (N183NatPlus nPlusA)))
+    NNat (N (N183NatPlus nMinus1) Is (Difference a To (N183NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub183 =
     sub182 >> sub1
 
@@ -5995,8 +5995,8 @@ sub183 =
 
 -}
 sub184 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N184NatPlus n) Is (Difference a To (N184NatPlus nPlusA)))
+    NNat (N (N184NatPlus nMinus1) Is (Difference a To (N184NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub184 =
     sub183 >> sub1
 
@@ -6006,8 +6006,8 @@ sub184 =
 
 -}
 sub185 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N185NatPlus n) Is (Difference a To (N185NatPlus nPlusA)))
+    NNat (N (N185NatPlus nMinus1) Is (Difference a To (N185NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub185 =
     sub184 >> sub1
 
@@ -6017,8 +6017,8 @@ sub185 =
 
 -}
 sub186 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N186NatPlus n) Is (Difference a To (N186NatPlus nPlusA)))
+    NNat (N (N186NatPlus nMinus1) Is (Difference a To (N186NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub186 =
     sub185 >> sub1
 
@@ -6028,8 +6028,8 @@ sub186 =
 
 -}
 sub187 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N187NatPlus n) Is (Difference a To (N187NatPlus nPlusA)))
+    NNat (N (N187NatPlus nMinus1) Is (Difference a To (N187NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub187 =
     sub186 >> sub1
 
@@ -6039,8 +6039,8 @@ sub187 =
 
 -}
 sub188 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N188NatPlus n) Is (Difference a To (N188NatPlus nPlusA)))
+    NNat (N (N188NatPlus nMinus1) Is (Difference a To (N188NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub188 =
     sub187 >> sub1
 
@@ -6050,8 +6050,8 @@ sub188 =
 
 -}
 sub189 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N189NatPlus n) Is (Difference a To (N189NatPlus nPlusA)))
+    NNat (N (N189NatPlus nMinus1) Is (Difference a To (N189NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub189 =
     sub188 >> sub1
 
@@ -6061,8 +6061,8 @@ sub189 =
 
 -}
 sub190 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N190NatPlus n) Is (Difference a To (N190NatPlus nPlusA)))
+    NNat (N (N190NatPlus nMinus1) Is (Difference a To (N190NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub190 =
     sub189 >> sub1
 
@@ -6072,8 +6072,8 @@ sub190 =
 
 -}
 sub191 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N191NatPlus n) Is (Difference a To (N191NatPlus nPlusA)))
+    NNat (N (N191NatPlus nMinus1) Is (Difference a To (N191NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub191 =
     sub190 >> sub1
 
@@ -6083,7 +6083,7 @@ sub191 =
 
 -}
 sub192 :
-    NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N192NatPlus n) Is (Difference a To (N192NatPlus nPlusA)))
+    NNat (N (N192NatPlus nMinus1) Is (Difference a To (N192NatPlus nPlusAMinus1)))
+    -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub192 =
     sub191 >> sub1

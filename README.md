@@ -1,17 +1,19 @@
 ## elm-n-nat
 
-Current attempts of represening `Nat`ural numbers (>= 0) only have quite lose promises.
+Current attempts of represening natural numbers (>= 0) only have quite lose promises.
 
 - If you know that your `Nat` is bigger than 3, why can't you subtract 1 or 2 or 3?
 
 This package contains a very strict `Nat` type. The _actual value_ is present in the type.
 
-- If you only want to ensure that a `Nat` is within a minimum & maximum, try [`elm-nat-within`][elm-nat-within]!
+- If you only want to ensure that a `Nat` is within a minimum & maximum, try [`elm-nat-in-range`][elm-nat-in-range]!
 
 Setup
 
 > elm install indique/elm-n-type
+
 > elm install indique/elm-n-nat-type
+
 > elm install indique/elm-n-nat
 
 ```elm

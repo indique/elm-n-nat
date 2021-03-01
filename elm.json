@@ -1,7 +1,7 @@
 {
     "type": "package",
     "name": "indique/elm-n-nat",
-    "summary": "natural numbers of an exact value",
+    "summary": "natural number of an exact value",
     "license": "MIT",
     "version": "1.0.1",
     "exposed-modules": [

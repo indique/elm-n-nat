@@ -465,7 +465,7 @@ nNatModule =
                             (fun "add1")
                         )
                 )
-        , List.range 1 lastN
+        , List.range 1 128
             |> List.map
                 (\x ->
                     packageExposedFunDecl NNatAdd
@@ -485,7 +485,7 @@ nNatModule =
                                     (fun "add1")
                         )
                 )
-        , List.range 1 lastN
+        , List.range 1 128
             |> List.map
                 (\x ->
                     packageExposedFunDecl NNatSub

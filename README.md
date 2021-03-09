@@ -6,7 +6,7 @@ Current attempts of represening natural numbers (>= 0) only have quite lose prom
 
 This package contains a very strict `Nat` type. The _actual value_ is present in the type.
 
-- If you only want to ensure that a `Nat` is within a minimum & maximum, try [`elm-nat-in-range`][elm-nat-in-range]!
+- If you only want to ensure that a `Nat` is within a minimum (& maximum), try [`elm-nat-in-range`][elm-nat-in-range]!
 
 Setup
 
@@ -18,9 +18,8 @@ Setup
 
 ```elm
 import NNat exposing (NNat)
-import N.Type exposing (..)
---this is N, Is, Difference, To
-import N.Nat.Type as Nat
+import N.Type exposing (..) --N, Is, Difference, To
+import N.Nat.Type exposing (..) --Nat0 to Nat192
 ```
 
 Lets take a look at its types
@@ -28,16 +27,16 @@ Lets take a look at its types
 ```elm
 n0 :
     NNat --a natural number
-        (N N0 --zero is the exact value at compile time
+        (N Nat0 --zero is the exact value at compile time
          Is (Difference a To a)
          --we can also describe zero as the difference a - a
         )
 
 sub1 :
     NNat
-        (N (N1Plus nMinus1)
+        (N (Nat1Plus nMinus1)
             --the exact value is nMinus1 + 1
-            Is (Difference a To (N1Plus nPlusAMinus1))
+            Is (Difference a To (Nat1Plus nPlusAMinus1))
             --we can also describe it as the difference (a + nMinus1 + 1) - a
         )
         

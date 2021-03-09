@@ -99,6 +99,8 @@ type alias Model =
         ShownOrFolded (Ui.Element Msg)
     , internalModuleShownOrFolded :
         ShownOrFolded (Ui.Element Msg)
+    , natsModuleShownOrFolded :
+        ShownOrFolded (Ui.Element Msg)
     }
 
 
@@ -115,10 +117,10 @@ type NNatTag
     = NNatType
     | NNatAdd
     | NNatSub
-    | NNatValue
     | NNatTransform
 
-
+type NatsTag =
+    NatsValue
 
 --
 
@@ -127,6 +129,7 @@ init : ( Model, Cmd Msg )
 init =
     ( { nNatModuleShownOrFolded = Folded
       , internalModuleShownOrFolded = Folded
+      , natsModuleShownOrFolded = Folded
       }
     , Cmd.none
     )
@@ -140,6 +143,7 @@ type Msg
 
 type ModulesInElmNArrays
     = NNat
+    | Nats
     | Internal
 
 
@@ -171,6 +175,7 @@ update msg model =
                  Zip.fromEntries
                     [ toZipEntry nNatModule
                     , toZipEntry internalModule
+                    , toZipEntry natsModule
                     ]
                     |> Zip.toBytes
                 )
@@ -192,6 +197,14 @@ update msg model =
                             switchShownOrFolded
                                 (.internalModuleShownOrFolded model)
                                 viewInternalModule
+                    }
+                
+                Nats ->
+                    { model
+                        | natsModuleShownOrFolded =
+                            switchShownOrFolded
+                                (.natsModuleShownOrFolded model)
+                                viewNatsModule
                     }
             , Cmd.none
             )
@@ -242,7 +255,7 @@ differenceAnn a nPlusA =
 
 nXNatPlusAnn : Int -> Elm.CodeGen.TypeAnnotation -> Elm.CodeGen.TypeAnnotation
 nXNatPlusAnn x more =
-    typed ("N" ++ String.fromInt x ++ "Plus") [ more ]
+    typed ("Nat" ++ String.fromInt x ++ "Plus") [ more ]
 
 
 toIntAnn : Elm.CodeGen.TypeAnnotation
@@ -254,7 +267,7 @@ zeroAnn : Elm.CodeGen.TypeAnnotation
 zeroAnn =
     nNatAnn
         (nAnn
-            (typed "N0" [])
+            (typed "Nat0" [])
             (differenceAnn (typeVar "a") (typeVar "a"))
         )
 
@@ -321,8 +334,8 @@ internalModule =
         [ importStmt [ "N", "Nat", "Type" ]
             noAlias
             (exposingExplicit
-                [ typeOrAliasExpose "N1Plus"
-                , typeOrAliasExpose "N0"
+                [ typeOrAliasExpose "Nat1Plus"
+                , typeOrAliasExpose "Nat0"
                 ]
             )
         , importStmt [ "N", "Type" ] noAlias exposingAll
@@ -400,8 +413,6 @@ nNatModule =
                     , docTagsFrom NNatType declarations
                     , markdown "## transform"
                     , docTagsFrom NNatTransform declarations
-                    , markdown "## values"
-                    , docTagsFrom NNatValue declarations
                     , markdown "## add"
                     , docTagsFrom NNatAdd declarations
                     , markdown "## at least"
@@ -436,34 +447,6 @@ nNatModule =
                 []
                 (fqConstruct [ "Internal" ] "toInt" [])
           ]
-        , [ packageExposedFunDecl NNatValue
-                [ markdown "The `NNat` 0." ]
-                zeroAnn
-                "n0"
-                []
-                (fqConstruct [ "Internal" ] "zero" [])
-          ]
-        , List.range 1 lastN
-            |> List.map
-                (\x ->
-                    packageExposedFunDecl NNatValue
-                        [ markdown ("The `NNat` " ++ String.fromInt x ++ ".") ]
-                        (nNatAnn
-                            (nAnn
-                                (typed ("N" ++ String.fromInt x) [])
-                                (differenceAnn (typeVar "a")
-                                    (nXNatPlusAnn x (typeVar "a"))
-                                )
-                            )
-                        )
-                        ("n" ++ String.fromInt x)
-                        []
-                        (applyBinOp
-                            (val ("n" ++ String.fromInt (x - 1)))
-                            piper
-                            (fun "add1")
-                        )
-                )
         , List.range 1 128
             |> List.map
                 (\x ->
@@ -509,6 +492,61 @@ nNatModule =
     }
 
 
+viewNatsModule : Ui.Element msg
+viewNatsModule =
+    Ui.module_ natsModule
+
+
+natsModule : Module NatsTag
+natsModule =
+    { name = [ "Nats" ]
+    , roleInPackage =
+        PackageExposedModule
+            { moduleComment =
+                \declarations->
+                    [ markdown "`NNat Nat0` to `NNat Nat192`."
+                    , docTagsFrom NatsValue declarations
+                    ]
+            }
+    , imports =
+        [ importStmt [ "NNat" ] noAlias exposingAll
+        , importStmt [ "N", "Nat", "Type" ] noAlias exposingAll
+        , importStmt [ "N", "Type" ] noAlias exposingAll
+        ]
+    , declarations =
+        [ [ packageExposedFunDecl NatsValue
+                [ markdown "The `NNat` 0." ]
+                zeroAnn
+                "nat0"
+                []
+                (fqConstruct [ "Internal" ] "zero" [])
+          ]
+        , List.range 1 lastN
+            |> List.map
+                (\x ->
+                    packageExposedFunDecl NatsValue
+                        [ markdown ("The `NNat` " ++ String.fromInt x ++ ".") ]
+                        (nNatAnn
+                            (nAnn
+                                (typed ("Nat" ++ String.fromInt x) [])
+                                (differenceAnn (typeVar "a")
+                                    (nXNatPlusAnn x (typeVar "a"))
+                                )
+                            )
+                        )
+                        ("nat" ++ String.fromInt x)
+                        []
+                        (applyBinOp
+                            (val ("n" ++ String.fromInt (x - 1)))
+                            piper
+                            (fun "add1")
+                        )
+                )
+        ]
+        |>List.concat
+    }
+
+
 
 --
 
@@ -540,7 +578,7 @@ charPrefixed use last =
 
 
 view : Model -> Html Msg
-view { nNatModuleShownOrFolded, internalModuleShownOrFolded } =
+view { nNatModuleShownOrFolded, internalModuleShownOrFolded, natsModuleShownOrFolded } =
     Ui.layoutWith
         { options =
             [ Ui.focusStyle
@@ -621,6 +659,9 @@ view { nNatModuleShownOrFolded, internalModuleShownOrFolded } =
                           )
                         , ( internalModuleShownOrFolded
                           , ( "Internal", Internal )
+                          )
+                        , ( natsModuleShownOrFolded
+                          , ( "Nats", Nats )
                           )
                         ]
                             |> List.map

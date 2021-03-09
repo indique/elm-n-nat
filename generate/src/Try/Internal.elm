@@ -20,13 +20,13 @@ zero =
 
 add1 :
     NNat (N n Is (Difference a To nPlusA))
-    -> NNat (N (N1NatPlus n) Is (Difference a To (N1NatPlus nPlusA)))
+    -> NNat (N (Nat1Plus n) Is (Difference a To (Nat1Plus nPlusA)))
 add1 nat =
     NNat (toInt nat + 1)
 
 
 sub1 :
-    NNat (N (N1NatPlus nMinus1) Is (Difference a To (N1NatPlus nPlusAMinus1)))
+    NNat (N (Nat1Plus nMinus1) Is (Difference a To (Nat1Plus nPlusAMinus1)))
     -> NNat (N nMinus1 Is (Difference a To nPlusAMinus1))
 sub1 nat =
     NNat (toInt nat - 1)

@@ -1,4 +1,4 @@
-module Nats exposing (n0, n1, n2, n3, n4, n10)
+module Nats exposing (nat0, nat1, nat2, nat3, nat4, nat10)
 
 {-| `NNat Nat0` to `NNat Nat192`.
 -}
@@ -9,31 +9,31 @@ import N.Nat.Type exposing (..)
 
 {-| The `NNat` 0.
 -}
-n0 : NNat (N N0Nat Is (Difference a To a))
-n0 =
+nat0 : NNat (N Nat0Nat Is (Difference a To a))
+nat0 =
     Internal.zero
 
 
-n1 : NNat (N N1 Is (Difference a To (N1Plus a)))
-n1 =
-    n0 |> add1
+nat1 : NNat (N Nat1 Is (Difference a To (Nat1Plus a)))
+nat1 =
+    nat0 |> add1
 
 
-n2 : NNat (N N2 Is (Difference a To (N2Plus a)))
-n2 =
-    n1 |> add1
+nat2 : NNat (N Nat2 Is (Difference a To (Nat2Plus a)))
+nat2 =
+    nat1 |> add1
 
 
-n3 : NNat (N N3 Is (Difference a To (N3Plus a)))
-n3 =
-    n2 |> add1
+nat3 : NNat (N Nat3 Is (Difference a To (Nat3Plus a)))
+nat3 =
+    nat2 |> add1
 
 
-n4 : NNat (N N4 Is (Difference a To (N4Plus a)))
-n4 =
-    n3 |> add1
+nat4 : NNat (N Nat4 Is (Difference a To (Nat4Plus a)))
+nat4 =
+    nat3 |> add1
 
 
-n10 : NNat (N N10 Is (Difference a To (N10Plus a)))
-n10 =
-    n4 |> add1 |> add1 |> add1 |> add1 |> add1 |> add1
+nat10 : NNat (N Nat10 Is (Difference a To (Nat10Plus a)))
+nat10 =
+    nat4 |> add1 |> add1 |> add1 |> add1 |> add1 |> add1

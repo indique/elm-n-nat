@@ -509,9 +509,11 @@ natsModule =
                     ]
             }
     , imports =
-        [ importStmt [ "NNat" ] noAlias exposingAll
+        [ importStmt [ "NNat" ] noAlias
+            (exposingExplicit [ funExpose "add1", typeOrAliasExpose "NNat" ])
         , importStmt [ "N", "Nat", "Type" ] noAlias exposingAll
         , importStmt [ "N", "Type" ] noAlias exposingAll
+        , importStmt [ "Internal" ] noAlias noExposing
         ]
     , declarations =
         [ [ packageExposedFunDecl NatsValue
@@ -537,7 +539,7 @@ natsModule =
                         ("nat" ++ String.fromInt x)
                         []
                         (applyBinOp
-                            (val ("n" ++ String.fromInt (x - 1)))
+                            (val ("nat" ++ String.fromInt (x - 1)))
                             piper
                             (fun "add1")
                         )

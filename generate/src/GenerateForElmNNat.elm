@@ -242,7 +242,7 @@ differenceAnn a nPlusA =
 
 nXNatPlusAnn : Int -> Elm.CodeGen.TypeAnnotation -> Elm.CodeGen.TypeAnnotation
 nXNatPlusAnn x more =
-    typed ("N" ++ String.fromInt x ++ "NatPlus") [ more ]
+    typed ("N" ++ String.fromInt x ++ "Plus") [ more ]
 
 
 toIntAnn : Elm.CodeGen.TypeAnnotation
@@ -254,7 +254,7 @@ zeroAnn : Elm.CodeGen.TypeAnnotation
 zeroAnn =
     nNatAnn
         (nAnn
-            (typed "N0Nat" [])
+            (typed "N0" [])
             (differenceAnn (typeVar "a") (typeVar "a"))
         )
 
@@ -321,8 +321,8 @@ internalModule =
         [ importStmt [ "N", "Nat", "Type" ]
             noAlias
             (exposingExplicit
-                [ typeOrAliasExpose "N1NatPlus"
-                , typeOrAliasExpose "N0Nat"
+                [ typeOrAliasExpose "N1Plus"
+                , typeOrAliasExpose "N0"
                 ]
             )
         , importStmt [ "N", "Type" ] noAlias exposingAll
@@ -386,13 +386,13 @@ nNatModule =
                 \declarations ->
                     [ markdown "Representing natural numbers (`>=0`)."
                     , markdown "This module lets you represent exact values in the `NNat` type."
-                    , markdown "This means, packages like [elm-n-array][elm-n-array] can use a `NNat` to promise:"
+                    , markdown "This means, packages like [elm-n-array](https://package.elm-lang.org/packages/indique/elm-n-array/latest/) can use a `NNat` to promise:"
                     , code "fromRepeating : NNat n -> element -> NArray n element"
                     , markdown "→ repeating an element n times gives a Array with n elements!"
                     , markdown "The other use is to describe a difference between two values."
                     , code "interval :"
                     , code "    { first : NNat (N first Is (Difference range To last))"
-                    , code "    , last : NNat (N last Is differenceLast)"
+                    , code "    , last : NNat (N last Is lastDifference)"
                     , code "    }"
                     , code "-> Interval"
                     , code "→ because `range` is 0 or positive, `last` must also be at least as high as `first`."
@@ -406,7 +406,6 @@ nNatModule =
                     , docTagsFrom NNatAdd declarations
                     , markdown "## at least"
                     , docTagsFrom NNatSub declarations
-                    , markdown "[elm-n-array]: https://package.elm-lang.org/packages/indique/elm-n-array/latest/"
                     ]
             }
     , imports =
@@ -451,7 +450,7 @@ nNatModule =
                         [ markdown ("The `NNat` " ++ String.fromInt x ++ ".") ]
                         (nNatAnn
                             (nAnn
-                                (typed ("N" ++ String.fromInt x ++ "Nat") [])
+                                (typed ("N" ++ String.fromInt x) [])
                                 (differenceAnn (typeVar "a")
                                     (nXNatPlusAnn x (typeVar "a"))
                                 )

@@ -10,19 +10,17 @@ This package contains a very strict `Nat` type. The _actual value_ is present in
 
 Setup
 
+> ```noformatingplease
 > elm install indique/elm-n-type
-
 > elm install indique/elm-n-nat-type
-
 > elm install indique/elm-n-nat
+> ```
 
 ```elm
 import NNat exposing (NNat)
 import N.Type exposing (..)
 --this is N, Is, Difference, To
-import N.Nat.Type exposing (..)
---this is N0Nat, N1Nat, ..., N1024Nat
---        N1NatPlus, N2NatPlus ..., N1024NatPlus
+import N.Nat.Type as Nat
 ```
 
 Lets take a look at its types
@@ -30,16 +28,16 @@ Lets take a look at its types
 ```elm
 n0 :
     NNat --a natural number
-        (N N0Nat --zero is the exact value at compile time
+        (N N0 --zero is the exact value at compile time
          Is (Difference a To a)
          --we can also describe zero as the difference a - a
         )
 
 sub1 :
     NNat
-        (N (N1NatPlus nMinus1)
+        (N (N1Plus nMinus1)
             --the exact value is nMinus1 + 1
-            Is (Difference a To (N1NatPlus nPlusAMinus1))
+            Is (Difference a To (N1Plus nPlusAMinus1))
             --we can also describe it as the difference (a + nMinus1 + 1) - a
         )
         
@@ -54,8 +52,8 @@ You can also express things like
 
     ```elm
     safeInterval :
-        NNat first (Plus lastMinusFirst Is last)
-        -> NNat last addAbility
+        NNat (N first Is (Difference lastMinusFirst To last))
+        -> NNat (N last Is lastDifference)
         -> Interval
     ```
 

@@ -1,4 +1,4 @@
-module Nats exposing (nat0, nat1, nat2, nat3, nat4, nat10)
+module NNats exposing (nat0, nat1, nat2, nat3, nat4, nat10)
 
 {-| `NNat Nat0` to `NNat Nat192`.
 -}

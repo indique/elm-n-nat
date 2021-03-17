@@ -119,8 +119,8 @@ type NNatTag
     | NNatSub
     | NNatTransform
 
-type NatsTag =
-    NatsValue
+type NNatsTag =
+    NNatsValue
 
 --
 
@@ -143,7 +143,7 @@ type Msg
 
 type ModulesInElmNArrays
     = NNat
-    | Nats
+    | NNats
     | Internal
 
 
@@ -199,12 +199,12 @@ update msg model =
                                 viewInternalModule
                     }
                 
-                Nats ->
+                NNats ->
                     { model
                         | natsModuleShownOrFolded =
                             switchShownOrFolded
                                 (.natsModuleShownOrFolded model)
-                                viewNatsModule
+                                viewNNatsModule
                     }
             , Cmd.none
             )
@@ -500,20 +500,20 @@ nNatModule =
     }
 
 
-viewNatsModule : Ui.Element msg
-viewNatsModule =
+viewNNatsModule : Ui.Element msg
+viewNNatsModule =
     Ui.module_ natsModule
 
 
-natsModule : Module NatsTag
+natsModule : Module NNatsTag
 natsModule =
-    { name = [ "Nats" ]
+    { name = [ "NNats" ]
     , roleInPackage =
         PackageExposedModule
             { moduleComment =
                 \declarations->
                     [ markdown "`NNat Nat0` to `NNat Nat192`."
-                    , docTagsFrom NatsValue declarations
+                    , docTagsFrom NNatsValue declarations
                     ]
             }
     , imports =
@@ -524,7 +524,7 @@ natsModule =
         , importStmt [ "Internal" ] noAlias noExposing
         ]
     , declarations =
-        [ [ packageExposedFunDecl NatsValue
+        [ [ packageExposedFunDecl NNatsValue
                 [ markdown "The `NNat` 0." ]
                 zeroAnn
                 "nat0"
@@ -534,7 +534,7 @@ natsModule =
         , List.range 1 lastN
             |> List.map
                 (\x ->
-                    packageExposedFunDecl NatsValue
+                    packageExposedFunDecl NNatsValue
                         [ markdown ("The `NNat` " ++ String.fromInt x ++ ".") ]
                         (nNatAnn
                             (nAnn
@@ -671,7 +671,7 @@ view { nNatModuleShownOrFolded, internalModuleShownOrFolded, natsModuleShownOrFo
                           , ( "Internal", Internal )
                           )
                         , ( natsModuleShownOrFolded
-                          , ( "Nats", Nats )
+                          , ( "NNats", NNats )
                           )
                         ]
                             |> List.map

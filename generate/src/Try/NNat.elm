@@ -67,6 +67,8 @@ toInt =
 
 
 {-| The `NNat` plus 1.
+
+Keep in mind, that if you want do calculations, rather go for [`nat-in-range`](https://package.elm-lang.org/packages/indique/elm-nat-in-range/latest/).
 -}
 add1 :
     NNat (N n Is (Difference a To nPlusA))
@@ -83,6 +85,9 @@ add2 =
 
 
 {-| The `NNat` minus 1.
+
+Keep in mind, that if you want do calculations, rather go for [`nat-in-range`](https://package.elm-lang.org/packages/indique/elm-nat-in-range/latest/).
+
 -}
 sub1 :
     NNat (N (N1Plus nMinus1) Is (Difference a To (N1Plus nPlusAMinus1)))

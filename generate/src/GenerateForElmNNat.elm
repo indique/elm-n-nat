@@ -408,7 +408,7 @@ nNatModule =
                     , code "    , last : NNat (N last Is lastDifference)"
                     , code "    }"
                     , code "-> Interval"
-                    , code "→ because `range` is 0 or positive, `last` must also be at least as high as `first`."
+                    , markdown "→ because `range` is 0 or positive, `last` must also be at least as high as `first`."
                     , markdown "See the readme for more information."
                     , docTagsFrom NNatType declarations
                     , markdown "## transform"
@@ -447,11 +447,15 @@ nNatModule =
                 []
                 (fqConstruct [ "Internal" ] "toInt" [])
           ]
-        , List.range 1 128
+        , List.range 1 16
             |> List.map
                 (\x ->
                     packageExposedFunDecl NNatAdd
                         [ markdown ("The `NNat` plus " ++ String.fromInt x ++ ".")
+                        , markdown
+                            ("Keep in mind, that if you want do calculations, rather go for "
+                            ++ "[`nat-in-range`](https://package.elm-lang.org/packages/indique/elm-nat-in-range/latest/)."
+                            )
                         ]
                         (addXAnn x)
                         ("add" ++ String.fromInt x)
@@ -467,11 +471,15 @@ nNatModule =
                                     (fun "add1")
                         )
                 )
-        , List.range 1 128
+        , List.range 1 16
             |> List.map
                 (\x ->
                     packageExposedFunDecl NNatSub
-                        [ markdown ("The NNat minus " ++ String.fromInt x ++ ".")
+                        [ markdown ("The `NNat` minus " ++ String.fromInt x ++ ".")
+                        , markdown
+                            ("Keep in mind, that if you want do calculations, rather go for "
+                            ++ "[`nat-in-range`](https://package.elm-lang.org/packages/indique/elm-nat-in-range/latest/)."
+                            )
                         ]
                         (subXAnn x)
                         ("sub" ++ String.fromInt x)

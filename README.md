@@ -2,11 +2,9 @@
 
 Current attempts of represening natural numbers (>= 0) only have quite lose promises.
 
-- If you know that your `Nat` is bigger than 3, why can't you subtract 1 or 2 or 3?
-
 This package contains a very strict `Nat` type. The _actual value_ is present in the type.
 
-- If you only want to ensure that a `Nat` is within a minimum (& maximum), try [`elm-nat-in-range`][elm-nat-in-range]!
+If you only want to ensure that a `Nat` is within a minimum (& maximum), [`elm-nat-in-range`][elm-nat-in-range] is the right choice!
 
 Setup
 
@@ -44,7 +42,9 @@ sub1 :
 ```
 → `sub1 n0` is a compile-time-error!
 
-→ We can only call `sub123` for a `NNat` that is at least 123
+→ We can only call `sub12` for a `NNat` that is at least 12
+
+**Most of the time, you rather want a [`nat-in-range`][elm-nat-in-range] to do calculations.**
 
 You can also express things like
 - one `NNat` should be at least as big as another one.
@@ -56,7 +56,7 @@ You can also express things like
         -> Interval
     ```
 
-Take a look at [`elm-nat-in-range`][elm-nat-in-range] & [`elm-n-array`][elm-n-array] to see `NNat` in action!
+Take a look at [`elm-nat-in-range`][elm-nat-in-range] & [`elm-array-in-range`][elm-array-in-range] to see how `NNat` is used!
 
 [elm-nat-in-range]: https://package.elm-lang.org/packages/indique/elm-nat-in-range/latest/
-[elm-n-array]: https://package.elm-lang.org/packages/indique/elm-n-array/latest/
+[elm-array-in-range]: https://package.elm-lang.org/packages/indique/elm-array-in-range/latest/

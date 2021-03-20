@@ -3,7 +3,7 @@
     "name": "indique/elm-n-nat",
     "summary": "natural number of an exact value",
     "license": "MIT",
-    "version": "4.0.1",
+    "version": "5.0.0",
     "exposed-modules": [
         "Moved"
     ],
